@@ -66,6 +66,16 @@ class RestaurantServiceTest {
     }
 
     @Test
+    public void calculate_order_value_with_empty_manu_list_will_zero(){
+
+    }
+
+    @Test
+    public void calculate_order_value_with_null_menu_list_will_zero(){
+
+    }
+
+    @Test
     public void add_restaurant_should_increase_list_of_restaurants_size_by_1(){
         initRestaurantTestDatawithManu();
         int initialNumberOfRestaurants = service.getRestaurants().size();
