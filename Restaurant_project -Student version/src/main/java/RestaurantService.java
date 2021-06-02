@@ -29,6 +29,17 @@ public class RestaurantService {
         return restaurantToBeRemoved;
     }
 
+    public int calculateOrderValue(List<Item> selectedMenuItems) {
+        int orderValue = 0;
+        if (selectedMenuItems != null && selectedMenuItems.size() > 0) {
+            for (Item item : selectedMenuItems) {
+                {
+                    orderValue = orderValue + item.getPrice();
+                }
+            }
+        }
+        return orderValue;
+    }
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
